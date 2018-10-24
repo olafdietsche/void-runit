@@ -4,6 +4,8 @@
 
 if [ -x /usr/lib/systemd/systemd-udevd ]; then
     _udevd=/usr/lib/systemd/systemd-udevd
+elif [ -x /lib/systemd/systemd-udevd ]; then
+    _udevd=/lib/systemd/systemd-udevd
 elif [ -x /sbin/udevd -o -x /bin/udevd ]; then
     _udevd=udevd
 else
